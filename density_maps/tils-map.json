@@ -1,0 +1,45 @@
+{
+  "params": {
+    "maxWidth": 1536,
+    "maxHeight": 1536,
+    "radius": 25.0,
+    "densityType": "PERCENT",
+    "mainObjectFilter": {
+      "predicate_type": "and",
+      "predicate1": {
+        "predicate_type": "filter",
+        "filter": "CELLS"
+      },
+      "predicate2": {
+        "predicate_type": "classified-name",
+        "pathClassNames": [
+          "Immune cells"
+        ]
+      }
+    },
+    "secondaryObjectFilters": {
+      "Immune cells: Immune cells": {
+        "predicate_type": "classified-name",
+        "pathClassNames": [
+          "Immune cells"
+        ]
+      }
+    }
+  },
+  "colorModelBuilder": {
+    "type": "SingleChannelColorModelBuilder",
+    "band": {
+      "colorMapName": "Inferno",
+      "band": 0,
+      "minDisplay": 0.0,
+      "maxDisplay": 100.0,
+      "gamma": 1.0
+    },
+    "alphaBand": {
+      "band": 1,
+      "minDisplay": 1.0E-6,
+      "maxDisplay": 48.0,
+      "gamma": 1.0
+    }
+  }
+}
